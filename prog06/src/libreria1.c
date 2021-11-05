@@ -1,4 +1,4 @@
-#include "./libreria1.h"
+#include "libreria1.h"
 
 int dobla(int n){
     n = n*2;

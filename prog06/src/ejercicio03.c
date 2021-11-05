@@ -1,6 +1,6 @@
 #include <stdio.h>
-#include "./libreria1.h"
-#include "./libreria2.h"
+#include "libreria1.h"
+#include "libreria2.h"
 
 int main(){
     int num = 4;

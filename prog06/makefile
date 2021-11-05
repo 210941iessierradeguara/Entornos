@@ -1,15 +1,19 @@
 EJECUTABLE:= prog3.exe
-FUENTES:= *.c
 OBJETOS:= libreria1.o libreria2.o ejercicio03.o
+SRC:=src
+BIN:=bin
 
-#objetivo: dependencia dependecia2 ... dependenciaN
+#objetivo: dependencia dependecia2 ... dependenciaN 
 #tab --> comando
 
 $(EJECUTABLE): $(OBJETOS)
-	$(CC) $^ -o $@
+	$(CC) $^ -o $(BIN)/$@
 
 %o: %.c
-	$(CC) -c $^
+	$(CC) -c $(SRC)/$^ -I .
 
 clean:
-	rm *.exe *.o
+	rm -rf $(BIN)/*.exe *.o hola
+
+hola:
+	mkdir hola
