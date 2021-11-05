@@ -1,10 +1,7 @@
-EJECUTABLE:= prog3.exe
-OBJETOS:= libreria1.o libreria2.o ejercicio03.o
+EJECUTABLE:= programaGeometria.exe
+OBJETOS:= areas.o volumenes.o main.o
 SRC:=src
 BIN:=bin
-
-#objetivo: dependencia dependecia2 ... dependenciaN 
-#tab --> comando
 
 $(EJECUTABLE): $(OBJETOS)
 	$(CC) $^ -o $(BIN)/$@
