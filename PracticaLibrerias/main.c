@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
         printf("¿Cuanto mide el lado?\n");
         scanf("%f",&lado);
         float areaCuadrado = cuadrado(lado);
-        printf("El área del cuadrado de lado: %f es: %.2f\n", lado, areaCuadrado);
+        printf("El área del cuadrado de lado: %.2f es: %.2f\n", lado, areaCuadrado);
         break;
     case 2: /*Rectangulo*/
         printf("¿Cuanto mide la base?\n");
