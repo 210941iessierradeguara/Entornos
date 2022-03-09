@@ -15,3 +15,8 @@ x = int(0)
 while n <= 0:
     print("El número ha de se distinto de 0")
     n = int(input("Introduzca un entero: "))
+
+for x in range(n+1):
+    for y in range(x):
+        print(str(y) + " ")
+    print("")
