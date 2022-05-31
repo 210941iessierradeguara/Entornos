@@ -9,49 +9,50 @@ import org.junit.jupiter.api.Test;
 import banco.Cuenta;
 
 class TestsCuenta {
-
+	private static Cuenta c;
+	
 	@Test
 	void testCuenta() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		assertEquals("001", c.getNumero());
 		assertEquals(7, c.getSaldo());
 	}
 
 	@Test
 	void testGetNumero() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		assertEquals("001", c.getNumero());
 	}
 
 	@Test
 	void testSetNumero() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		c.setNumero("002");
 		assertEquals("002", c.getNumero());
 	}
 
 	@Test
 	void testGetSaldo() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		assertEquals(7, c.getSaldo());
 	}
 
 	@Test
 	void testSetSaldo() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		c.setSaldo(8);
 		assertEquals(8, c.getSaldo());
 	}
 
 	@Test
 	void testToString() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		assertEquals("Cuenta [numero=001, saldo=7.0]", c.toString());
 	}
 
 	@Test
 	void testIngresarDinero() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		try {
 			c.ingresarDinero(3);
 		} catch (Exception e) {
@@ -66,7 +67,7 @@ class TestsCuenta {
 		Exception e = assertThrows(Exception.class,
 				// pasas una lambda para que el parametro como tal sea un excepción
 				()->{
-						Cuenta c = new Cuenta("001", 7);
+						c = new Cuenta("001", 7);
 						c.ingresarDinero(-2);
 					}, "Se esperaba una excepción"
 				);// fin metodo assertThrows
@@ -75,7 +76,7 @@ class TestsCuenta {
 
 	@Test
 	void testExtraerDinero() {
-		Cuenta c = new Cuenta("001", 7);
+		c = new Cuenta("001", 7);
 		try {
 			c.extraerDinero(2);
 		} catch (Exception e) {
@@ -90,7 +91,7 @@ class TestsCuenta {
 		Exception e = assertThrows(Exception.class,
 				// pasas una lambda para que el parametro como tal sea un excepción
 				()->{
-					Cuenta c = new Cuenta("001", 7);
+					c = new Cuenta("001", 7);
 					c.extraerDinero(-2);
 					}, "Se esperaba una excepción"
 				);// fin metodo assertThrows
@@ -102,7 +103,7 @@ class TestsCuenta {
 		Exception e = assertThrows(Exception.class,
 				// pasas una lambda para que el parametro como tal sea un excepción
 				()->{
-					Cuenta c = new Cuenta("001", 7);
+					c = new Cuenta("001", 7);
 					c.extraerDinero(8);
 					}, "Se esperaba una excepción"
 				);// fin metodo assertThrows
